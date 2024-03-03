@@ -14,3 +14,13 @@ class TeamMember:
         daily_hours_min, daily_hours_max = self.available_hours
         total_available_hours = (sprint_days - self.hours_off) * (daily_hours_max - self.hours_committed)
         return total_available_hours
+    
+def calculate_team_capacity(sprint_days, team_members):
+    """
+    Calculate available effort-hours for the team.
+    :param sprint_days: Number of sprint days
+    :param team_members: List of TeamMember objects
+    :return: Available effort-hours for the team
+    """
+    total_capacity = sum(member.calculate_available_hours(sprint_days) for member in team_members)
+    return total_capacity
