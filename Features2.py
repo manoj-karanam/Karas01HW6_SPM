@@ -42,4 +42,4 @@ team_effort_hours, avg_effort_hours_per_person = calculate_effort_hour_capacity(
 # Output
 print("Total Team Effort Hours:", team_effort_hours)
 print("Average Available Effort-Hours/Person:", avg_effort_hours_per_person)
-=======
+
